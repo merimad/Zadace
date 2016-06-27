@@ -38,9 +38,8 @@ second = "second value"
 if let third = second
 {
     print(third)
+
 }
-
-
 //Operatori
 
 let b = 10
@@ -258,7 +257,6 @@ var airPorts: [String: String] =
 ["XYZ":"Toronto Pearson","DUB": "Dublin"]
 airPorts.isEmpty
 airPorts.count
-airPorts["XYZ"]
 airPorts["XYZ"] = "BiH"
 airPorts["XYZ"] = nil
 
@@ -266,3 +264,5 @@ for(code, name) in airPorts
 {
     print("\(code): \(name)")
 }
+
+
