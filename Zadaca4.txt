@@ -1,0 +1,98 @@
+//Zadatak 1 
+//Dio 1
+
+// 1) Struktura Location sa poljima latitude i longitude
+
+struct Location {
+    var latitude: Double
+    var longitude: Double
+    init() {
+        latitude = Double (arc4random() % 181 ) - 90
+        longitude = Double (arc4random() % 361 ) - 90
+    }
+}
+
+// 2) Klasa Person
+
+class Person {
+    var name: String
+    var lastName: String
+    var yearOfBirth: Int
+    var location = Location()
+    var age: Int {
+        get {
+            return 2016 - yearOfBirth
+        }
+    }
+    init(name: String, lastName: String, yearOfBirth: Int, location: Location){
+        self.name = name
+        self.lastName = lastName
+        self.yearOfBirth = yearOfBirth
+        self.location = location
+        
+    }
+    convenience init (name: String, lastName: String) {
+        
+        self.init(name: name, lastName: lastName)
+        yearOfBirth = 1990
+        location = Location()
+    }
+    func introduction() -> String {
+        return("Hi, my name is \(name) \(lastName).Age \(age).")
+    }
+}
+// 3) Konstante mirko i nedim
+
+let mirko = Person(name: "Mirko", lastName: "Babic", yearOfBirth: 1987, location: Location() )
+let nedim = Person(name: "Nedim", lastName: "Sabic", yearOfBirth: 1982, location: Location())
+
+mirko.introduction()
+print(mirko.introduction())
+nedim.introduction()
+print(nedim.introduction())
+
+/// Dio 2
+// 1) Struktura Course
+struct Course {
+    var teacher: Person
+    var courseName: String
+    func aboutCourse() -> String {
+        return ("\(courseName) course by prof. \(teacher.lastName)")
+        
+    }
+    
+}
+// 2) Klasa Student
+
+class Student: Person {
+    var attendingCourses: [Course]
+    var grades: [Int]
+    var faculty = "WiP"
+    var averageGrade: Double {
+        get {
+            var sum = 0
+            for grade in grades {
+                sum += grade
+                
+            }
+            return Double (sum) / Double (grades.count)
+            
+        }
+    }
+    
+init (name: String, lastName: String, yearOfBirth: Int, location: Location, attendingCourses: [Course], grades: [Int]) {
+        self.attendingCourses = attendingCourses
+        self.grades = grades
+        super.init(name: name, lastName: lastName, yearOfBirth: yearOfBirth, location: location)
+    }
+    
+    override func introduction () -> String {
+        return super.introduction() + "I' m a student at \(faculty). My favourite course is " + attendingCourses.first!.aboutCourse()
+    }
+}
+/// 3) Kursevi
+ var iOSDevelopment = Course(teacher: mirko, courseName: "iOSDevelopment")
+ var seo = Course(teacher: nedim, courseName: "SEO")
+ var courses : [Course] = [seo, iOSDevelopment] 
+ var student = Student(name: "Merima", lastName: "Delic", yearOfBirth: 1989, location: Location(), attendingCourses: courses, grades: [8, 7, 9, 8, 9, 7])
+ print(student.introduction())
