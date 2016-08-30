@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="jsd-mW-PPz">
-                                <rect key="frame" x="20" y="60" width="560" height="437"/>
+                                <rect key="frame" x="20" y="60" width="560" height="493"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEu-XE-Ll1">
                                         <rect key="frame" x="0.0" y="0.0" width="84" height="21"/>
@@ -50,6 +50,10 @@
                                             <outletCollection property="gestureRecognizers" destination="GlN-Dc-fYb" appends="YES" id="E1D-vM-g3f"/>
                                         </connections>
                                     </imageView>
+                                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="44" translatesAutoresizingMaskIntoConstraints="NO" id="PNN-GJ-bMd" customClass="RatingControl" customModule="FoodTracker_v1" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="449" width="240" height="44"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="ih9-pY-l2v" secondAttribute="trailing" id="Upk-hi-5DA"/>
