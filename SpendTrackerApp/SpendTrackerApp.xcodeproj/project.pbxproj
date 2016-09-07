@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		0C49684D1D7F09DB00E7F804 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C49684C1D7F09DB00E7F804 /* AppDelegate.swift */; };
-		0C49684F1D7F09DB00E7F804 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C49684E1D7F09DB00E7F804 /* ViewController.swift */; };
+		0C49684F1D7F09DB00E7F804 /* SpendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C49684E1D7F09DB00E7F804 /* SpendViewController.swift */; };
 		0C4968521D7F09DB00E7F804 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C4968501D7F09DB00E7F804 /* Main.storyboard */; };
 		0C4968541D7F09DB00E7F804 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C4968531D7F09DB00E7F804 /* Assets.xcassets */; };
 		0C4968571D7F09DB00E7F804 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C4968551D7F09DB00E7F804 /* LaunchScreen.storyboard */; };
 		0C4968621D7F09DB00E7F804 /* SpendTrackerAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4968611D7F09DB00E7F804 /* SpendTrackerAppTests.swift */; };
 		0C49686D1D7F2E0B00E7F804 /* SpendTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C49686C1D7F2E0B00E7F804 /* SpendTracker.swift */; };
 		0C49686E1D7F2E0B00E7F804 /* SpendTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C49686C1D7F2E0B00E7F804 /* SpendTracker.swift */; };
+		0C4968701D80068D00E7F804 /* SpendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C49686F1D80068D00E7F804 /* SpendTableViewCell.swift */; };
+		0C4968721D80175500E7F804 /* SpendTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4968711D80175500E7F804 /* SpendTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +32,7 @@
 /* Begin PBXFileReference section */
 		0C4968491D7F09DB00E7F804 /* SpendTrackerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpendTrackerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C49684C1D7F09DB00E7F804 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0C49684E1D7F09DB00E7F804 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0C49684E1D7F09DB00E7F804 /* SpendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendViewController.swift; sourceTree = "<group>"; };
 		0C4968511D7F09DB00E7F804 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0C4968531D7F09DB00E7F804 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C4968561D7F09DB00E7F804 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -39,6 +41,8 @@
 		0C4968611D7F09DB00E7F804 /* SpendTrackerAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendTrackerAppTests.swift; sourceTree = "<group>"; };
 		0C4968631D7F09DB00E7F804 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C49686C1D7F2E0B00E7F804 /* SpendTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpendTracker.swift; sourceTree = "<group>"; };
+		0C49686F1D80068D00E7F804 /* SpendTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpendTableViewCell.swift; sourceTree = "<group>"; };
+		0C4968711D80175500E7F804 /* SpendTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpendTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,9 +85,11 @@
 			isa = PBXGroup;
 			children = (
 				0C49684C1D7F09DB00E7F804 /* AppDelegate.swift */,
-				0C49684E1D7F09DB00E7F804 /* ViewController.swift */,
+				0C49684E1D7F09DB00E7F804 /* SpendViewController.swift */,
 				0C49686C1D7F2E0B00E7F804 /* SpendTracker.swift */,
 				0C4968501D7F09DB00E7F804 /* Main.storyboard */,
+				0C4968711D80175500E7F804 /* SpendTableViewController.swift */,
+				0C49686F1D80068D00E7F804 /* SpendTableViewCell.swift */,
 				0C4968531D7F09DB00E7F804 /* Assets.xcassets */,
 				0C4968551D7F09DB00E7F804 /* LaunchScreen.storyboard */,
 				0C4968581D7F09DB00E7F804 /* Info.plist */,
@@ -201,8 +207,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C4968721D80175500E7F804 /* SpendTableViewController.swift in Sources */,
+				0C4968701D80068D00E7F804 /* SpendTableViewCell.swift in Sources */,
 				0C49686D1D7F2E0B00E7F804 /* SpendTracker.swift in Sources */,
-				0C49684F1D7F09DB00E7F804 /* ViewController.swift in Sources */,
+				0C49684F1D7F09DB00E7F804 /* SpendViewController.swift in Sources */,
 				0C49684D1D7F09DB00E7F804 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -394,6 +402,7 @@
 				0C4968681D7F09DB00E7F804 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0C4968691D7F09DB00E7F804 /* Build configuration list for PBXNativeTarget "SpendTrackerAppTests" */ = {
 			isa = XCConfigurationList;
@@ -402,6 +411,7 @@
 				0C49686B1D7F09DB00E7F804 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,27 +1,65 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="J6i-me-5Fi">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Your Expenses-->
         <scene sceneID="OV8-KF-6xd">
             <objects>
-                <tableViewController id="56t-VI-K7j" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="4xD-NQ-ri2">
+                <tableViewController id="56t-VI-K7j" customClass="SpendTableViewController" customModule="SpendTrackerApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="160" sectionHeaderHeight="28" sectionFooterHeight="28" id="4xD-NQ-ri2">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Ryj-uo-rgF">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SpendTableViewCell" rowHeight="160" id="Ryj-uo-rgF" customClass="SpendTableViewCell" customModule="SpendTrackerApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="160"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ryj-uo-rgF" id="lLo-s6-w3I">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="159"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kpU-xN-0hE">
+                                            <rect key="frame" x="8" y="8" width="584" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Amount of the expense" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kP9-gO-3Ln">
+                                            <rect key="frame" x="8" y="37" width="584" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLu-eF-Wqc">
+                                            <rect key="frame" x="8" y="66" width="584" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description of the expense" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p7E-Va-oYq">
+                                            <rect key="frame" x="8" y="95" width="584" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xld-YB-XNZ">
+                                            <rect key="frame" x="8" y="124" width="584" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="amountLabel" destination="gLu-eF-Wqc" id="urA-g8-rhG"/>
+                                    <outlet property="dateLabel" destination="kpU-xN-0hE" id="aZ8-14-APJ"/>
+                                    <outlet property="descriptionLabel" destination="Xld-YB-XNZ" id="PJ9-Dc-NqG"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowDetail" id="v56-Qd-Ue1"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -29,15 +67,22 @@
                             <outlet property="delegate" destination="56t-VI-K7j" id="qOu-Kp-fLy"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Your Expenses" id="CTO-FG-yiy">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Bge-JY-K8q">
+                            <connections>
+                                <segue destination="f7L-UY-c2j" kind="presentation" identifier="AddItem" id="AWw-cH-YeU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rXT-RS-OkQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-183" y="223"/>
+            <point key="canvasLocation" x="595" y="231"/>
         </scene>
-        <!--View Controller-->
+        <!--New Expense-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SpendTrackerApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SpendViewController" customModule="SpendTrackerApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -77,11 +122,14 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="w3X-qX-Mkr" firstAttribute="leading" secondItem="U0m-aX-VdD" secondAttribute="leading" id="4Rn-JD-B5L"/>
+                                    <constraint firstAttribute="trailing" secondItem="agO-5M-Iee" secondAttribute="trailing" id="7AI-r9-VnA"/>
                                     <constraint firstItem="agO-5M-Iee" firstAttribute="leading" secondItem="U0m-aX-VdD" secondAttribute="leading" id="AMS-o6-4Im"/>
+                                    <constraint firstItem="agO-5M-Iee" firstAttribute="top" secondItem="WWU-kd-7EB" secondAttribute="bottom" constant="12" id="DWj-H7-tHp"/>
                                     <constraint firstItem="r9Y-AL-mXT" firstAttribute="leading" secondItem="U0m-aX-VdD" secondAttribute="leading" id="GIR-qp-E6U"/>
                                     <constraint firstItem="agO-5M-Iee" firstAttribute="top" secondItem="WWU-kd-7EB" secondAttribute="bottom" constant="12" id="HKA-t5-Qeq"/>
                                     <constraint firstItem="WWU-kd-7EB" firstAttribute="leading" secondItem="U0m-aX-VdD" secondAttribute="leading" id="KSi-qj-SEc"/>
                                     <constraint firstItem="WWU-kd-7EB" firstAttribute="top" secondItem="w3X-qX-Mkr" secondAttribute="bottom" constant="12" id="Lbt-6V-6iw"/>
+                                    <constraint firstItem="agO-5M-Iee" firstAttribute="leading" secondItem="U0m-aX-VdD" secondAttribute="leading" id="Lcy-wL-CMq"/>
                                     <constraint firstAttribute="trailing" secondItem="agO-5M-Iee" secondAttribute="trailing" id="bIf-Tw-nyB"/>
                                     <constraint firstAttribute="trailing" secondItem="w3X-qX-Mkr" secondAttribute="trailing" id="cAb-MV-Qlb"/>
                                     <constraint firstAttribute="trailing" secondItem="r9Y-AL-mXT" secondAttribute="trailing" id="caa-EL-UBR"/>
@@ -92,20 +140,73 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="U0m-aX-VdD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Ppg-HZ-3Up"/>
-                            <constraint firstItem="U0m-aX-VdD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="c1F-FD-7Qs"/>
+                            <constraint firstItem="U0m-aX-VdD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="c1F-FD-7Qs"/>
                             <constraint firstAttribute="trailingMargin" secondItem="U0m-aX-VdD" secondAttribute="trailing" id="zMt-Kp-qwc"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="New Expense" id="lit-jk-FWQ">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="NEr-Kq-HwG">
+                            <connections>
+                                <action selector="cancel:" destination="BYZ-38-t0r" id="QWm-rO-oRc"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="TF4-7a-G9V">
+                            <connections>
+                                <segue destination="hCu-BK-X77" kind="unwind" unwindAction="unwindToExpenseList:" id="hUW-xu-gwM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="amountTextField" destination="r9Y-AL-mXT" id="ZrO-20-LSJ"/>
                         <outlet property="datePicker" destination="agO-5M-Iee" id="EqG-KG-bpx"/>
                         <outlet property="descriptionTextField" destination="w3X-qX-Mkr" id="7OG-jt-YsA"/>
+                        <outlet property="saveButton" destination="TF4-7a-G9V" id="emv-rk-rH6"/>
                         <outlet property="selectedDate" destination="WWU-kd-7EB" id="Hyb-vz-Pbs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="hCu-BK-X77" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="454" y="223"/>
+            <point key="canvasLocation" x="1938" y="231"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ou6-LL-9st">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="J6i-me-5Fi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wXP-pZ-9Nc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="56t-VI-K7j" kind="relationship" relationship="rootViewController" id="Vk3-Mb-DUC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Luu-uA-WWz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-183" y="223"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="snc-xb-QgS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="f7L-UY-c2j" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mys-6w-M0a">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Lgx-5X-hg0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PsN-5U-eUV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1272" y="663"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="v56-Qd-Ue1"/>
+    </inferredMetricsTieBreakers>
 </document>
