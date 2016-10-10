@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AaR-Jc-Yu2">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--KONTAKTI-->
+        <scene sceneID="xRG-IO-C9z">
+            <objects>
+                <tableViewController id="FZY-he-m8r" customClass="ContactTableViewController" customModule="Dopuna" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="6cE-W2-om0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="600" placeholderIntrinsicHeight="30" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" textLabel="cNH-lk-zeO" detailTextLabel="2DO-PG-xqZ" rowHeight="30" style="IBUITableViewCellStyleSubtitle" id="VFM-LS-nD9" customClass="ContactTableViewCell" customModule="Dopuna" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="375" height="30"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VFM-LS-nD9" id="4Pw-eP-9N6">
+                                    <frame key="frameInset" width="375" height="30"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cNH-lk-zeO">
+                                            <frame key="frameInset" minX="15" minY="-1" width="31.5" height="19.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2DO-PG-xqZ">
+                                            <frame key="frameInset" minX="15" minY="18.5" width="40.5" height="13.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="contactNameLabel" destination="cNH-lk-zeO" id="AkV-Kh-bPS"/>
+                                    <outlet property="contactNumberLabel" destination="2DO-PG-xqZ" id="1hk-gr-i4V"/>
+                                    <segue destination="b1q-L9-7Lo" kind="unwind" unwindAction="unwindToMainController:" id="6Ym-Qx-APq"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="FZY-he-m8r" id="LIu-hF-F1V"/>
+                            <outlet property="delegate" destination="FZY-he-m8r" id="HGd-Oh-e6U"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="KONTAKTI" id="Fst-zP-V97">
+                        <barButtonItem key="backBarButtonItem" title=" " id="cRk-NE-AAO"/>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="sDg-lD-mQp">
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="Htc-Wq-4Sh"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="trash" id="bba-rR-tR6">
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="editContact:" destination="FZY-he-m8r" id="eko-BB-3Me"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="editContactButton" destination="bba-rR-tR6" id="cii-v0-oGY"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yoY-6P-s1G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="b1q-L9-7Lo" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1623" y="277"/>
+        </scene>
+        <!--DODAJ NOVI KONTAKT-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Dopuna" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="phoneImage" translatesAutoresizingMaskIntoConstraints="NO" id="hb1-RE-Whp">
+                                <frame key="frameInset" minX="20" minY="151" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="+ 387" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqd-fi-pMk">
+                                <frame key="frameInset" minX="48" minY="151" width="52" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.32549019607843138" green="0.85882352941176465" blue="0.81176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="contactImage" translatesAutoresizingMaskIntoConstraints="NO" id="pO0-Ht-71R">
+                                <frame key="frameInset" minX="20" minY="93" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ime i prezime (opciono)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qrh-DJ-gXg">
+                                <frame key="frameInset" minX="61" minY="88" width="519" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Broj telefona" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LLa-zO-rKQ">
+                                <frame key="frameInset" minX="115" minY="142" width="465" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gik-ZC-98C">
+                                <frame key="frameInset" minX="20" minY="209" width="560" height="30"/>
+                                <color key="backgroundColor" red="0.32549019607843138" green="0.85882352941176465" blue="0.81176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="DODAJ NOVI RAČUN">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="keyPath">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addNewContact:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OTE-FV-LH7"/>
+                                    <segue destination="5sm-Im-gsd" kind="unwind" identifier="" unwindAction="unwindToContactList:" id="E4j-OY-dQt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Qrh-DJ-gXg" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="5" id="7ID-7Z-0Lx"/>
+                            <constraint firstItem="LLa-zO-rKQ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="5" id="Ms8-Ty-daL"/>
+                            <constraint firstItem="gik-ZC-98C" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="5" id="R0W-gC-atV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="DODAJ NOVI KONTAKT" id="Dth-IZ-m7A">
+                        <barButtonItem key="backBarButtonItem" title=" " id="Hav-JK-7YR">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="0yE-vv-Iot">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="addNewContactBarButton:" destination="BYZ-38-t0r" id="4sr-A1-tM4"/>
+                                <segue destination="5sm-Im-gsd" kind="unwind" unwindAction="unwindToContactList:" id="slV-Ju-KmR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addNewContactBarButton" destination="0yE-vv-Iot" id="hMV-m4-iF2"/>
+                        <outlet property="contactImage" destination="pO0-Ht-71R" id="EGe-mI-LzH"/>
+                        <outlet property="contactName" destination="Qrh-DJ-gXg" id="XBO-HB-Mnd"/>
+                        <outlet property="contactNumber" destination="LLa-zO-rKQ" id="M6I-yO-lXi"/>
+                        <outlet property="dodajNoviRacun" destination="gik-ZC-98C" id="HGP-kj-CsA"/>
+                        <outlet property="numberImage" destination="hb1-RE-Whp" id="hsi-r2-jYP"/>
+                        <outlet property="stateNumber" destination="dqd-fi-pMk" id="A5P-uM-egQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="5sm-Im-gsd" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2748" y="115"/>
+        </scene>
+        <!--DOPUNA BiH-->
+        <scene sceneID="BtS-8t-2OG">
+            <objects>
+                <viewController id="XWI-hr-4O7" customClass="MainViewController" customModule="Dopuna" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2R5-Qo-Oer"/>
+                        <viewControllerLayoutGuide type="bottom" id="DBZ-vP-RAn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="R5p-pi-OVX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4l-yJ-Kqi">
+                                <frame key="frameInset" minX="20" minY="119" width="560" height="41"/>
+                                <state key="normal" title="DODAJ KONTAKT"/>
+                                <connections>
+                                    <segue destination="FZY-he-m8r" kind="show" id="Uff-Zt-RG0"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="tMW-hP-XIp">
+                                <frame key="frameInset" minX="20" minY="185" width="560" height="29"/>
+                                <segments>
+                                    <segment title="m:tel"/>
+                                    <segment title="BH Telecom"/>
+                                </segments>
+                                <connections>
+                                    <action selector="odaberiMrezu:" destination="XWI-hr-4O7" eventType="valueChanged" id="Jra-IJ-f2o"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cuu-yz-PPB">
+                                <frame key="frameInset" minX="20" minY="301" width="560" height="43"/>
+                                <state key="normal" title="DOPUNI RAČUN"/>
+                                <connections>
+                                    <action selector="dopuniRacun:" destination="XWI-hr-4O7" eventType="touchUpInside" id="HfW-E6-qVW"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Nfq-ez-Hcg">
+                                <frame key="frameInset" minX="20" minY="241" width="560" height="29"/>
+                                <segments>
+                                    <segment title="2 KM"/>
+                                    <segment title="3 KM"/>
+                                    <segment title="4 KM"/>
+                                    <segment title="5 KM"/>
+                                    <segment title="10 KM"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tMW-hP-XIp" firstAttribute="trailing" secondItem="R5p-pi-OVX" secondAttribute="trailingMargin" constant="5" id="1G7-TU-ZAg"/>
+                            <constraint firstItem="O4l-yJ-Kqi" firstAttribute="trailing" secondItem="R5p-pi-OVX" secondAttribute="trailingMargin" constant="5" id="P32-r1-4s4"/>
+                            <constraint firstItem="Nfq-ez-Hcg" firstAttribute="trailing" secondItem="R5p-pi-OVX" secondAttribute="trailingMargin" constant="5" id="f0x-gx-zBU"/>
+                            <constraint firstItem="cuu-yz-PPB" firstAttribute="trailing" secondItem="R5p-pi-OVX" secondAttribute="trailingMargin" constant="5" id="nBG-xJ-TSP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="DOPUNA BiH" id="tdD-Ah-prd">
+                        <barButtonItem key="backBarButtonItem" title=" " id="xNN-OC-kKJ"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="dopuni" destination="cuu-yz-PPB" id="i60-ez-M6p"/>
+                        <outlet property="insertContact" destination="O4l-yJ-Kqi" id="kyl-5x-RZd"/>
+                        <outlet property="iznos" destination="Nfq-ez-Hcg" id="B0j-y8-XGc"/>
+                        <outlet property="mreza" destination="tMW-hP-XIp" id="GMB-GB-btg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0mp-73-FhJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="103" y="277"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="blY-H4-Cco">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AaR-Jc-Yu2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IPd-wH-9gW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.32549019610000002" green="0.85882352939999995" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="XWI-hr-4O7" kind="relationship" relationship="rootViewController" id="QAJ-3V-lW7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yTo-vb-mcU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-709" y="277"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="contactImage" width="22" height="22"/>
+        <image name="phoneImage" width="22" height="22"/>
+    </resources>
+    <color key="tintColor" red="0.32549019610000002" green="0.85882352939999995" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+</document>
